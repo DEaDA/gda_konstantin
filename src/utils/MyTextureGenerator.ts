@@ -24,31 +24,31 @@ export default class MyTextureGenerator {
     static createRandomShape() {
         const graphics = new Graphics();
         const color = 0xffffff;
-        let shapeType = Math.floor(Math.random() * 4); // 0: круг, 1: квадрат, 2: треугольник, 3: звезда
+        let shapeType = Math.floor(Math.random() * 4); 
         graphics.beginFill(color);
 
         switch (shapeType) {
             case 0: // Круг
-                const radius = Math.random() * 50 + 20; // Радиус от 20 до 70
+                const radius = Math.random() * 50 + 20; 
                 graphics.drawCircle(100, 100, radius);
                 break;
 
             case 1: // Квадрат
-                const size = Math.random() * 50 + 20; // Размер от 20 до 70
+                const size = Math.random() * 50 + 20; 
                 graphics.drawRect(100, 100, size, size);
                 break;
 
             case 2: // Треугольник
-                const side = Math.random() * 50 + 20; // Длина стороны
+                const side = Math.random() * 50 + 20; 
                 graphics.drawPolygon([
-                    100, -side / Math.sqrt(3), // Вершина сверху
-                    100 - side / 2, 100 + side / (2 * Math.sqrt(3)), // Левая нижняя точка
-                    100 + side / 2, 100 + side / (2 * Math.sqrt(3)), // Правая нижняя точка
+                    100, -side / Math.sqrt(3), 
+                    100 - side / 2, 100 + side / (2 * Math.sqrt(3)), 
+                    100 + side / 2, 100 + side / (2 * Math.sqrt(3)), 
                 ]);
                 break;
 
             case 3: // Звезда
-                const points = Math.floor(Math.random() * 5) + 5; // От 5 до 9 вершин
+                const points = Math.floor(Math.random() * 5) + 5; 
                 const innerRadius = Math.random() * 30 + 10;
                 const outerRadius = Math.random() * 50 + 30;
                 const starPoints: number[] = [];

@@ -37,6 +37,6 @@ export class SceneCards extends Container {
                     }
                 });
             }
-        }, 1000);
+        }, 2000);
     }
 }

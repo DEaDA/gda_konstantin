@@ -25,7 +25,6 @@ export class Logo extends Container {
 
         img.interactive = true;
         img.on('pointerdown', () => {
-            window.open('https://www.taraxa.io/')
         })
     }
 }
